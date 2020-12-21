@@ -12,6 +12,10 @@
     color: var(--fontColorP)
 }
 
+.apresentation > img {
+    display: none;
+}
+
 h2 {
     font-size: 1.2em;
 }
@@ -25,7 +29,7 @@ h2 > span {
     margin-top: 30px;
     width: 200px;
     padding: 15px;
-    display: flex;
+    display: inline;
     justify-content: space-around;
     align-items: center;
     border-radius: 10px;
@@ -40,6 +44,56 @@ h2 > span {
     font-size: 30px ;
 }
 
+@media screen and (min-width: 720px) {
+    .apresentation {
+        flex-direction: column;
+        justify-content: center;
+    }
 
+    .myGit {
+        display: flex;
+        margin: 20px;
+    }
 
+    .apresentation > img {
+        display: block;
+        width: 100vw;
+        height: 50vh;
+        object-fit: contain;
+    }
+}
 
+@media screen and (min-width: 1024px) {
+    .apresentation {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .apresentation > div {
+        width: 40%;
+        margin-left: 10%;
+        margin-top: 2.5%;
+    }
+
+    .apresentation > img {
+        width: 60%;
+    }
+
+    .myGit {
+        display: inline;
+    }
+
+    h2 {
+        font-size: 1.4em;
+    }
+
+    h2 > span {
+        font-size: 1.6em;
+    }
+}
+
+@media screen and (min-width: 1920px) { 
+    .myGit {
+        width: 260px;
+    }
+}

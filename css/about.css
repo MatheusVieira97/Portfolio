@@ -2,24 +2,27 @@
 
 .about {
     height: 100vh;
-    padding: 0px 20px;
+    background-color: var(--BgColor2);
+    color: var(--fontColorP);
+}
+
+.about > div {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     text-align: center;
-    background-color: var(--BgColor2);
-    color: var(--fontColorP);
+    padding: 0px 30px;
 }
 
 h3 {
     font-size: 1.6em;
-    padding-top: 30px;
+    padding-top: 10px;
     color: var(--fontColorTittle);
 }
 
 .myLinkedIn {
-    margin: 30px 0px 30px;
+    margin: 20px 0px 10px;
     width: 200px;
     padding: 15px;
     display: flex;
@@ -35,4 +38,68 @@ h3 {
 
 .myLinkedIn > i {
     font-size: 30px ;
+}
+
+.about > img {
+    display: none;
+}
+
+@media screen and (min-width: 720px) {
+    h3 {
+        font-size: 2em;
+    }
+
+    .about > div {
+        height: 100%;
+        padding: 0px 60px;
+        font-size: 1.6em;
+    }
+
+    .myLinkedIn {
+        font-size: 1em;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .about {
+        height: 100vh;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+
+    .about > div {
+        height: 100%;
+        width: 60%;
+        padding: 30px;
+        margin: 0px;
+        font-size: 1.2em;
+    }
+
+    .about> img {
+        display: block;
+        width: 40%;
+        height: 100vh;
+        object-fit: contain;
+    }
+
+    h3 {
+        font-size: 1.4em;
+    }
+
+    .myLinkedIn {
+        display: inline;
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (min-width: 1920px) { 
+    .myLinkedIn {
+        width: 300px;
+        font-size: 1em;
+    }
+    
+    h3 {
+        padding: 20px;
+    }
+
 }
